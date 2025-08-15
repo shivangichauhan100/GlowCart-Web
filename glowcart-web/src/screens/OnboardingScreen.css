@@ -1,0 +1,101 @@
+.onboarding {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7e9e7 0%, #ffe2de 50%, #f7e9e7 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.onboarding::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="%23ffffff" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.onboarding-content {
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.onboarding-hero {
+  width: 280px;
+  height: 380px;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.onboarding-hero:hover {
+  transform: scale(1.02);
+}
+
+.onboarding-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #bf6a6a;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+}
+
+.onboarding-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8c6d6d;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.onboarding-tagline {
+  color: #9a7777;
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.onboarding-btn {
+  padding: 16px 36px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 30px;
+  box-shadow: 0 8px 24px rgba(212, 107, 107, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.onboarding-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.onboarding-btn:hover::before {
+  left: 100%;
+}
+
+.onboarding-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(212, 107, 107, 0.4);
+}
